@@ -10,4 +10,6 @@ let person = {
 
 person.greet();
 
-console.log(person['firstName'], person['lastName']);
+//console.log(person['firstName'], person['lastName']);
+//console.log(person.greet());
+
