@@ -7,7 +7,7 @@ function solve(n){
         arr.push(i);
         
     }
-    console.log(arr);
+    return arr;
     
      for ( let num of arr){
         let strArr = num.toString();
@@ -16,16 +16,16 @@ function solve(n){
         let sum = num1 + num2 ;
         newArr.push(sum);
      }
-     console.log(newArr);
+     return newArr;
      for ( let i = 0; i < newArr.length; i ++ ){
         total += newArr[i];
      }
-     console.log(total);
+     return total;
      
     
     
     
     
 }
-//solve(15)
+solve(15)
 solve(25)
