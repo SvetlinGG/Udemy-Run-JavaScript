@@ -23,3 +23,4 @@ function solve(str){
 }
 solve("abcde");
 solve("aabbcde");
+solve("aabBcde");
