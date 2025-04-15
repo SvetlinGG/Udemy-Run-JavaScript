@@ -13,3 +13,4 @@ function solve(arr){
 
 }
 solve([1,2,'a','b'])
+solve([1,2,'aasf','1','123',123])
