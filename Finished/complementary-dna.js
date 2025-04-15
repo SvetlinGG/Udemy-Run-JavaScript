@@ -11,7 +11,7 @@ function solve(dna){
     dna = dna.replace('A', 'T');
     dna = dna.replace('T', 'A');
     dna = dna.replace('G', 'C');
-    dna = dna.replace('C', 'G');
+    //dna = dna.replace('C', 'G');
     console.log(dna);
     
     
