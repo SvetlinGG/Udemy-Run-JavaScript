@@ -1,0 +1,14 @@
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background: #fdf6e3;
+  }
+  .month {
+    margin-bottom: 10px;
+  }
+  .rabbits {
+    font-size: 20px;
+  }
+  .emoji {
+    margin-right: 4px;
+  }
