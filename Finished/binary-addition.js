@@ -5,4 +5,4 @@ function solve(a, b){
     
 
 }
-solve(5, 9)
+solve(5, 9);
