@@ -2,15 +2,17 @@ function solve(str){
 
     let arr = str.split('');
     let newArr = [];
-    for ( let i = 0; i < arr.length; i++){
+    for ( let i = 0; i < arr.length; i +=2){
 
-        if ( arr[i] === arr.length){
-            break;
-        }
+        
 
         if ( arr.length % 2 === 0){
             newArr.push(arr[i] + arr[i+1]);
+            
+        }else {
+            newArr.push(arr[i] + (arr[i+1] || '_'));
         }
+        
         
     }
     
@@ -19,3 +21,5 @@ function solve(str){
 
 }
 solve('abcd');
+solve('abc');
+solve('abcdef');
