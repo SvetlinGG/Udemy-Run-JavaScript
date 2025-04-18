@@ -1,0 +1,60 @@
+body {
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+  }
+
+  .tabs {
+    display: flex;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    max-width: 600px;
+    width: 100%;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    padding: 10px;
+  }
+
+  details {
+    border: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  summary {
+    list-style: none;
+    cursor: pointer;
+    font-weight: bold;
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    background: #f1f1f1;
+    display: inline-block;
+    margin-right: 5px;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    transition: background 0.3s ease;
+  }
+
+  summary:hover {
+    background: #e0e0e0;
+  }
+
+  details[open] > summary {
+    background: white;
+    border-bottom: none;
+    position: relative;
+    top: 1px;
+    z-index: 1;
+  }
+
+  details > *:not(summary) {
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    border-top: none;
+    background: white;
+  }
+
+  /* Hide content when not open */
+  details:not([open]) > *:not(summary) {
+    display: none;
+  }

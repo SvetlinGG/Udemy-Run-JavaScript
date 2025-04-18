@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Tabs with Details</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      display: flex;
+      justify-content: center;
+      padding-top: 50px;
+    }
+
+    .tabs {
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      max-width: 600px;
+      width: 100%;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      padding: 10px;
+    }
+
+    details {
+      border: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    summary {
+      list-style: none;
+      cursor: pointer;
+      font-weight: bold;
+      padding: 10px 15px;
+      border: 1px solid #ddd;
+      background: #f1f1f1;
+      display: inline-block;
+      margin-right: 5px;
+      border-top-left-radius: 6px;
+      border-top-right-radius: 6px;
+      transition: background 0.3s ease;
+    }
+
+    summary:hover {
+      background: #e0e0e0;
+    }
+
+    details[open] > summary {
+      background: white;
+      border-bottom: none;
+      position: relative;
+      top: 1px;
+      z-index: 1;
+    }
+
+    details > *:not(summary) {
+      padding: 10px 15px;
+      border: 1px solid #ddd;
+      border-top: none;
+      background: white;
+    }
+
+    /* Hide content when not open */
+    details:not([open]) > *:not(summary) {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <section class="tabs">
+    <details open>
+      <summary>Stuff Happens</summary>
+      <p>Hello</p>
+    </details>
+
+    <details>
+      <summary>More stuff here</summary>
+      <p>There</p>
+      <p>There</p>
+      <p>There</p>
+      <p>There</p>
+    </details>
+
+    <details>
+      <summary>Another one</summary>
+      <p>Bites</p>
+      <p>The</p>
+      <p>Dust</p>
+    </details>
+  </section>
+
+  <script>
+    const tabs = document.querySelectorAll('details');
+
+    tabs.forEach((tab) => {
+      tab.addEventListener('toggle', () => {
+        if (tab.open) {
+          tabs.forEach((otherTab) => {
+            if (otherTab !== tab) otherTab.open = false;
+          });
+        }
+      });
+    });
+  </script>
+
+</body>
+</html
+
+  
