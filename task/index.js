@@ -1,11 +1,19 @@
-const tabs = document.querySelectorAll('details');
+document.addEventListener("DOMContentLoaded", () => {
+  const container = document.querySelector(".tabs");
+  const details = container.querySelectorAll("details");
 
-    tabs.forEach((tab) => {
-      tab.addEventListener('toggle', () => {
-        if (tab.open) {
-          tabs.forEach((otherTab) => {
-            if (otherTab !== tab) otherTab.open = false;
-          });
-        }
-      });
+  details.forEach((detail) => {
+    detail.addEventListener("toggle", () => {
+      if (detail.open && window.innerWidth <= 800) {
+        
+        details.forEach((d) => {
+          if (d !== detail) d.removeAttribute("open");
+        });
+
+        
+        container.appendChild(detail);
+      }
     });
+  });
+});
+
