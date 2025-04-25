@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <link rel="stylesheet" href="/Udemy-Run-JavaScript/electro-calculator/style.css">
   <title>RF Energy Calculator</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   
 </head>
 <body>
@@ -19,8 +20,15 @@
     <label>Усилване на приемника (Gᵣ):</label><br>
     <input type="number" id="gr" value="1.5"><br>
 
-    <label>Честота (f) [GHz]:</label><br>
-    <input type="number" id="freq" value="2"><br>
+    <label>Избери мобилна мрежа (честота):</label><br>
+    <select id="network">
+      <option value="0.9">2G (900 MHz)</option>
+      <option value="1.8">2G/3G (1800 MHz)</option>
+      <option value="2.1">3G (2100 MHz)</option>
+      <option value="2.6">4G (2600 MHz)</option>
+      <option value="3.5">5G (3500 MHz)</option>
+      <option value="28">5G mmWave (28 GHz)</option>
+    </select><br>
 
     <label>Разстояние (d) [m]:</label><br>
     <input type="number" id="dist" value="100"><br><br>
@@ -29,8 +37,11 @@
 
     <h3>Резултат:</h3>
     <p id="result"></p>
+
+    <canvas id="chart" width="500" height="300"></canvas>
   </div>
 
   <script src="/Udemy-Run-JavaScript/electro-calculator/index.js"></script>
 </body>
 </html>
+
