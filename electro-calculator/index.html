@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="/Udemy-Run-JavaScript/electro-calculator/style.css">
+  <title>RF Energy Calculator</title>
+  
+</head>
+<body>
+  <div class="container">
+    <h2>Калкулатор за добив на радиовълнова енергия</h2>
+
+    <label>Мощност на предавателя (Pₜ) [W]:</label><br>
+    <input type="number" id="pt" value="40"><br>
+
+    <label>Усилване на предавателя (Gₜ):</label><br>
+    <input type="number" id="gt" value="10"><br>
+
+    <label>Усилване на приемника (Gᵣ):</label><br>
+    <input type="number" id="gr" value="1.5"><br>
+
+    <label>Честота (f) [GHz]:</label><br>
+    <input type="number" id="freq" value="2"><br>
+
+    <label>Разстояние (d) [m]:</label><br>
+    <input type="number" id="dist" value="100"><br><br>
+
+    <button onclick="calculate()">Изчисли</button>
+
+    <h3>Резултат:</h3>
+    <p id="result"></p>
+  </div>
+
+  <script src="/Udemy-Run-JavaScript/electro-calculator/index.js"></script>
+</body>
+</html>

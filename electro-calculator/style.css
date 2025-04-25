@@ -1,0 +1,15 @@
+body { 
+    font-family: Arial; padding: 20px; background: #f7f7f7; 
+}
+input { 
+    margin: 5px 0; width: 100px; 
+}
+.container { 
+    background: white; 
+    padding: 20px; 
+    border-radius: 10px; 
+    max-width: 500px; 
+    box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+h2 { 
+    color: #333; 
+}
